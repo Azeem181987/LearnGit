@@ -1,0 +1,48 @@
+# my_set = {"January","February","March","January"}
+
+# for element in my_set:
+#     print(element)
+    
+# my_set.add("April")
+# print(my_set)
+# my_set.remove("January")
+# print(my_set)
+
+import pandas as pd
+# cal = 24*60*60
+# Units = "Seconds"
+
+def Sec_cal(days, conversion_unit):
+    try:
+        if conversion_unit == "Hours":
+            return f" {days} Days have {days * 24} {conversion_unit}"
+        elif conversion_unit == "Minutes":
+                return f" {days} Days have {days * 24 * 60} {conversion_unit}"
+        else:
+            print("UNsupporte Unit")
+            
+    except ValueError: # Any type of error (try/Catch)
+        print ("Alert: Your giving a wrong input")
+            
+def logic_den():
+    try:
+    #if Days_input.isdigit():
+        Days = days_and_unit_dictionary["Days"] # Change
+        if Days > 0:
+            Var_input = Sec_cal(Days, days_and_unit_dictionary["Unit"])
+            print(Var_input)
+        elif Days == 0:
+            print("No calculation on 0. Please provide postive number")
+        else:
+            print("You are entering negative number not good for program")      
+    
+    except ValueError: # Any type of error (try/Catch)
+        print ("Alert: Your giving a wrong input")
+        
+Days_input_unit =  "" # Define the input
+while Days_input_unit != "exit":
+    Days_input_unit = input ("Please Enter the number of Days as a comma sepreted list, and I will convert it like {'Days': 45, 'Unit': 'Hours'}: \n") 
+    Days_input_unit = Days_input_unit.split(":")
+    days_and_unit_dictionary = {"Days": int(Days_input_unit[0]), "Unit":Days_input_unit[1].strip()} # Dictionary
+    print(days_and_unit_dictionary)
+    logic_den()
