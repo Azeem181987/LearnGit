@@ -46,3 +46,8 @@ while Days_input_unit != "exit":
     days_and_unit_dictionary = {"Days": int(Days_input_unit[0]), "Unit":Days_input_unit[1].strip()} # Dictionary
     print(days_and_unit_dictionary)
     logic_den()
+    #Hello oys
+
+
+
+
