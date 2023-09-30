@@ -48,6 +48,7 @@ while Days_input_unit != "exit":
     logic_den()
     #Hello oys
     # hello guies
+    print("hogaya")
 
 
 
